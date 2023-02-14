@@ -16,7 +16,7 @@ public enum LengthUnit {
 				//returns Length object as length between l1 and l2 in "this" units
 				//Example: LengthUnit.M.between (new Length(200, LengthUnit.CM), new Length(1, LengthUnit.M))
 				//returns Length(1, LengthUnit.M)
-		return new Length(l2.getAmount() - l1.getAmount(), this);
+		return new Length(Math.abs(l2.getAmount() - l1.getAmount()), this);
 	}
 	
 
